@@ -1,23 +1,15 @@
+#!/bin/sh
 #
-# These things are run when an Openbox X Session is started.
-# You may place a similar script in $HOME/.config/openbox/autostart
-# to run user-specific things.
+# fluxbox startup-script:
 #
+# Lines starting with a '#' are ignored.
 
-# If you want to use GNOME config tools...
-#
-#if test -x /usr/lib/i386-linux-gnu/gnome-settings-daemon >/dev/null; then
-#  /usr/lib/i386-linux-gnu/gnome-settings-daemon &
-#elif which gnome-settings-daemon >/dev/null 2>&1; then
-#  gnome-settings-daemon &
-#fi
-
-# If you want to use XFCE config tools...
-#
-#xfce-mcs-manager &
+# Change your keymap:
+xmodmap "~/.Xmodmap"
 
 
-# APLICACIONES QUE SE LANZARÁN AL INICIO
+# APLICACIONES QUE SE LANZARÁN AL INICIO EN FLUXBOX
+
 # Desabilito la opción de que se apague la pantalla después de 10 minutos
 xset -dpms s off
 
@@ -28,24 +20,27 @@ xset -dpms s off
 # Si usted desea ver el status de xset ponga en la terminal: xset q
 # al final debe de decir: DPMS is Disabled
 
+# xsct_gui https://github.com/wachin/xsct_gui
+# sleep 20; /home/wachin/Dev-python/xsct_gui/Launcher.sh &
+
 # Internet
-#nm-applet &
+nm-applet &
 
 # Habilitar KDE Connect:
-#kdeconnect-indicator &
+kdeconnect-indicator &
 
 # Terminales
 konsole &
 
 # Elevación de privilegios  para ciertas aplicaciones como: Synaptic, Discos, etc
-#/usr/lib/i386-linux-gnu/libexec/polkit-kde-authentication-agent-1 &
+/usr/lib/i386-linux-gnu/libexec/polkit-kde-authentication-agent-1 &
 
 # inicie pulseaudio antes de pnmixer
 #start-pulseaudio-x11 &
 pulseaudio --start &
 
 # Mixer escrito en Qt
-#pnmixer &
+pnmixer &
 
 # Para que la tecla numerica funcione
 numlockx on &
@@ -54,28 +49,26 @@ numlockx on &
 vnote &
 
 # Es nesesario para poder configurar la velocidad de los cursores de dispositivos externos:
-#xinput-gui &
+xinput-gui &
 
 # Lanzar el Administrador de archivos
-# Pueden activar cualquiera de los siguientes si los instalan(exepto thunar que ya está instalado):
+# Pueden activar cualquiera de los siguientes si los instalan(exepto thunar que ya está instalado): 
 #thunar &
 dolphin &
-#caja &
+#caja & 
 # nemo &
 # nautilus &
 #pcmanfm &
 
 # Editores de texto, elija cual usar (debe instalarlo):
 kate &
-#gedit &
+#gedit & 
 #pluma &
 #geany &
 
 # Poner el bloque de notas en la bandeja del sistema:
-
-feathernotes /home/wachin/Documentos/FeatherNotes/2024-07-15-wachi.fnx &
-
-# xfce4-notes &
+#feathernotes /home/wachin/Documentos/FeatherNotes/2024-07-15-wachi.fnx &
+xfce4-notes &
 
 # Aplicacion para poder expulsar USB, Pendrives
 
@@ -84,13 +77,14 @@ feathernotes /home/wachin/Documentos/FeatherNotes/2024-07-15-wachi.fnx &
 #/usr/libexec/at-spi-bus-launcher --launch-immediately  &
 
 # Colocar en el escritorio el último fondo seleccionado
-#sleep 10; nitrogen --restore &
+sleep 10; nitrogen --restore &
+
 
 
 # AJUSTE DE DISTRIBUCIÓN DE TECLADO
 # Si usted usa un teclado en español con el esquema siguiente: http://kbdlayout.info/kbdsp/overview+names
 # le recomiendo que use el siguienta para que coincidan las letras:
-#setxkbmap -layout es & # Teclado Español europeo
+setxkbmap -layout es & # Teclado Español europeo
 
 # Si desea otro teclado aquí están (igual si activan alguno deben desactivar el anterior):
 #setxkbmap -layout de & # Teclado Alemán
@@ -103,12 +97,12 @@ feathernotes /home/wachin/Documentos/FeatherNotes/2024-07-15-wachi.fnx &
 #setxkbmap -layout pl & # Teclado Polaco
 #setxkbmap -layout pt & # Teclado Portugués
 #setxkbmap -layout ru & # Teclado Ruso
-
+             
 # Esto es necesario apra asegurarse que al inicio se cargue el teclado correcto
 # En el sistema operativo los demás idiomas están en /usr/share/X11/xkb/symbols/
 # eso es si desea saber cuál es el nombre del archivo, allí usted
 # deberá abrir alguno, ejemplo puede abrir: de el cual es el alemán
-# algún otro idioma usted debería tener alguna idea de cómo se podría
+# algún otro idioma usted debería tener alguna idea de cómo se podría 
 # llamar el respectivo archivo
 
 # PROGRAMAS DE USUARIO (OPCIONALES)
@@ -138,13 +132,13 @@ chromium &
 alarm-clock-applet  &
 
 # Si Ud usa una impresora HP deberá de instalar HPLIP instále: sudo apt-get install hplip-gui
-# para lanzarlo se puede desde las aplicaciones instaladas
+# para lanzarlo se puede desde las aplicaciones instaladas 
 # o también desde la terminal con: hp-systray -x
 # y para que se cargue en la bandeja del sistema active lo siguiente:
 #hp-systray -x &
 
-# Si usa Shutter para tomar captura de pantallas, este es el comando
-# para que se cargue iconizado y no ocupe espacio
+# Si usa Shutter para tomar captura de pantallas, este es el comando 
+# para que se cargue iconizado y no ocupe espacio 
 #shutter --min_at_startup &
 
 # El siguiente es para activar el monitor debatería, pero no lo active porque no funciona con gammy abierto:
@@ -156,7 +150,7 @@ alarm-clock-applet  &
 # Si usted utiliza Dropbox el siguiente comando es para que se abra
 #dropbox start -i &
 
-# Si tu laptop u ordenador tiene Bluetooth debe activarlo y si
+# Si tu laptop u ordenador tiene Bluetooth debe activarlo y si 
 #blueman-applet &
 
 # Si uste tuviera un teclado externo Logitech k400 instale: sudo apt install solaar
@@ -164,3 +158,24 @@ alarm-clock-applet  &
 # para que se iconize en la bandeja del sistema active:
 #solaar &
 
+# SI DESEA AÑADIR UNA APLICACION AL INICIO ASEGÚRESE DE PONER''&'' AL FINAL, EJEMPLO:
+#
+# unclutter -idle 2 &
+# wmnd &
+# wmsmixer -w &
+# idesk &
+#
+# Debian-local change:
+#   - fbautostart has been added with a quick hack to check to see if it
+#     exists. If it does, we'll start it up by default.
+which fbautostart > /dev/null
+if [ $? -eq 0 ]; then
+    fbautostart
+fi
+
+# And last but not least we start fluxbox.
+# Because it is the last app you have to run it with ''exec'' before it.
+
+exec fluxbox
+# or if you want to keep a log:
+# exec fluxbox -log "~/.fluxbox/log"
