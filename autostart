@@ -38,7 +38,7 @@ xset -dpms s off
 konsole &
 
 # Elevación de privilegios  para ciertas aplicaciones como: Synaptic, Discos, etc
-#/usr/lib/i386-linux-gnu/libexec/polkit-kde-authentication-agent-1 &
+/usr/lib/i386-linux-gnu/libexec/polkit-kde-authentication-agent-1 &
 
 # inicie pulseaudio antes de pnmixer
 #start-pulseaudio-x11 &
