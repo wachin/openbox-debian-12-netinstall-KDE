@@ -191,6 +191,15 @@
 
 <keyboard>
   <chainQuitKey>C-g</chainQuitKey>
+  
+    <!-- Custom Applications Launch -->
+    
+  <keybind key="C-A-A">
+    <action name="Execute">
+        <command>xfce4-appfinder</command>
+    </action>
+  </keybind>
+
 
   <!-- Keybindings for desktop switching -->
   <keybind key="C-A-Left">
@@ -307,16 +316,18 @@
     <action name="Execute">
       <startupnotify>
         <enabled>true</enabled>
-        <name>Konqueror</name>
+        <name>Thunar</name>
       </startupnotify>
-      <command>kfmclient openProfile filemanagement</command>
+      <command>thunar</command>
     </action>
   </keybind>
+
   <!-- Launch scrot when Print is pressed -->
   <keybind key="Print">
     <action name="Execute"><command>scrot</command></action>
   </keybind>
 </keyboard>
+
 
 <mouse>
   <dragThreshold>1</dragThreshold>
