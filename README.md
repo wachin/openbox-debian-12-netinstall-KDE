@@ -9,7 +9,7 @@ Debian 12 Netinstall CD
 and install:
 
 ```
-sudo apt install openbox-kde-session git numlock obkey numlockx lxpanel lxrandr xfce4-notes feathernotes
+sudo apt install openbox-kde-session git numlock obkey numlockx lxpanel lxrandr xfce4-notes feathernotes lxsession-logout
 ```
 
 
