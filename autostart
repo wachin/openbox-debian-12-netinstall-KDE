@@ -19,7 +19,10 @@
 
 # APLICACIONES QUE SE LANZARÁN AL INICIO
 # Desabilito la opción de que se apague la pantalla después de 10 minutos
-xset -dpms s off
+xset -dpms s off &
+
+# LX Randr por si hay un monitor externo
+lxrandr &
 
 # Esto lo deja así: Standby: 0    Suspend: 0    Off: 0
 # Desabilito esa opción que está por defecto porque en algunos ordenadores
@@ -73,9 +76,9 @@ kate &
 
 # Poner el bloque de notas en la bandeja del sistema:
 
-feathernotes /home/wachin/Documentos/FeatherNotes/2024-07-15-wachi.fnx &
+#feathernotes /home/wachin/Documentos/FeatherNotes/2024-07-15-wachi.fnx &
 
-# xfce4-notes &
+xfce4-notes &
 
 # Aplicacion para poder expulsar USB, Pendrives
 
