@@ -31,8 +31,8 @@ xset -dpms s off
 # Internet
 #nm-applet &
 
-# Habilitar KDE Connect:
-#kdeconnect-indicator &
+# LXpanel
+lxpanel &
 
 # Terminales
 konsole &
@@ -130,8 +130,8 @@ ksnip &
 
 # Navegadores web, elija cual usar:
 # firefox-esr &
-#firefox &
-chromium &
+firefox &
+#chromium &
 
 
 # Alarm Clock Applet
