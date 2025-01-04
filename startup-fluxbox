@@ -26,6 +26,9 @@ xset -dpms s off
 # Internet
 nm-applet &
 
+# Paanel de Aplicaciones
+lxpanel &
+
 # Habilitar KDE Connect:
 kdeconnect-indicator &
 
