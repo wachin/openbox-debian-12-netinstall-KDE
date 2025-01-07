@@ -35,13 +35,19 @@ lxrandr &
 #nm-applet &
 
 # LXpanel
-lxpanel &
+# lxpanel &
+tint2 &
 
 # Terminales
 konsole &
 
 # Elevación de privilegios  para ciertas aplicaciones como: Synaptic, Discos, etc
+
+# 32 bit
 /usr/lib/i386-linux-gnu/libexec/polkit-kde-authentication-agent-1 &
+
+# 64 bit
+# /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1 &
 
 # inicie pulseaudio antes de pnmixer
 #start-pulseaudio-x11 &
