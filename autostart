@@ -20,10 +20,6 @@
 # APLICACIONES QUE SE LANZARÁN AL INICIO
 # Desabilito la opción de que se apague la pantalla después de 10 minutos
 xset -dpms s off &
-
-# LX Randr por si hay un monitor externo
-lxrandr &
-
 # Esto lo deja así: Standby: 0    Suspend: 0    Off: 0
 # Desabilito esa opción que está por defecto porque en algunos ordenadores
 # cuando la pantalla se apaga se cuelga (edemás de que cuando uno está
@@ -31,18 +27,19 @@ lxrandr &
 # Si usted desea ver el status de xset ponga en la terminal: xset q
 # al final debe de decir: DPMS is Disabled
 
+# LX Randr por si hay un monitor externo
+lxrandr &
+
 # Internet
 #nm-applet &
 
-# LXpanel
-# lxpanel &
+# Panel
 tint2 &
 
 # Terminales
 konsole &
 
 # Elevación de privilegios  para ciertas aplicaciones como: Synaptic, Discos, etc
-
 # 32 bit
 /usr/lib/i386-linux-gnu/libexec/polkit-kde-authentication-agent-1 &
 
@@ -156,8 +153,6 @@ alarm-clock-applet  &
 # para que se cargue iconizado y no ocupe espacio
 #shutter --min_at_startup &
 
-# El siguiente es para activar el monitor debatería, pero no lo active porque no funciona con gammy abierto:
-#xfce4-power-manager &
 
 # Poner el portapapeles en la barra de herramientas
 # xfce4-clipman &
@@ -173,3 +168,8 @@ alarm-clock-applet  &
 # para que se iconize en la bandeja del sistema active:
 #solaar &
 
+# Icono de estado de batería ligero y rápido, y más
+cbatticon &
+
+# Icono del volumen (con clic derecho se abre pavucontrol):
+volumeicon &
