@@ -3,9 +3,13 @@
 Openbox KDE Session
 
 ## Download and installation
-You need to download
+Este tutorial lo uso en:
 
 Debian 12 Netinstall CD
+
+que lo he instalado siguiendo estas instrucciones:
+
+
 
 ## **2. Instalar Openbox y herramientas necesarias**
 
